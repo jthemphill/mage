@@ -84,13 +84,11 @@ public class LoadTest {
         for (Card card : deck.getCards()) {
             Assert.assertTrue("card " + card.getName() + " color " + card.getColorIdentity().toString() + " must be in UR",
                     card.getColorIdentity().isBlue() || card.getColorIdentity().isRed());
-            Assert.assertEquals("card " + card.getName() + " must be basic land ", Rarity.LAND, card.getRarity());
         }
 
         deck = DeckTestUtils.buildRandomDeck("B", true);
         for (Card card : deck.getCards()) {
             Assert.assertTrue("card " + card.getName() + " color " + card.getColorIdentity().toString() + " must be in B", card.getColorIdentity().isBlack());
-            Assert.assertEquals("card " + card.getName() + " must be basic land ", Rarity.LAND, card.getRarity());
         }
 
         // allowed sets
